@@ -16,7 +16,10 @@ const authentication = (e) => {
       localStorage.setItem("token", response.data.token);
       window.location = "/";
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      alert(`Error al iniciar sesión`);
+      console.log(error);
+    });
 };
 
 const Login = () => {
